@@ -256,15 +256,12 @@ vec3 ray_color(const ray& r, const hittable& world, int depth) {
 hittable_list random_scene() {
     hittable_list world;
     
-//    auto checker = make_shared<checker_texture>(
-//        make_shared<constant_texture>(vec3(0.2, 0.3, 0.1)),
-//        make_shared<constant_texture>(vec3(0.9, 0.9, 0.9))
-//    );
+    auto checker = make_shared<checker_texture>(
+        make_shared<constant_texture>(vec3(0.2, 0.3, 0.1)),
+        make_shared<constant_texture>(vec3(0.9, 0.9, 0.9))
+    );
 
-//    world.add(make_shared<sphere>(vec3(0,-1000,0), 1000, make_shared<lambertian>(checker)));
-    
-    world.add(make_shared<sphere>(
-        vec3(0,-1000,0), 1000, make_shared<lambertian>(vec3(0.5, 0.5, 0.5))));
+    world.add(make_shared<sphere>(vec3(0,-1000,0), 1000, make_shared<lambertian>(checker)));
 
     for (int a = -11; a < 11; a++) {
         for (int b = -11; b < 11; b++) {
@@ -282,13 +279,8 @@ hittable_list random_scene() {
                     auto albedo = vec3::random() * vec3::random();
                     world.add(make_shared<moving_sphere>(
                         center, center + vec3(0, random_double(0,.5), 0), 0.0, 1.0, 0.2,
-                        make_shared<lambertian>(albedo)));
+                        make_shared<lambertian>(make_shared<constant_texture>(albedo))));
                 }
-                
-                
-                
-                
-                
                 else if (choose_mat < 0.95) {
                     // metal
                     auto albedo = vec3::random(.5, 1);
@@ -305,9 +297,11 @@ hittable_list random_scene() {
 
     world.add(make_shared<sphere>(vec3(0, 1, 0), 1.0, make_shared<dielectric>(1.5)));
 
-    world.add(
-        make_shared<sphere>(vec3(-4, 1, 0), 1.0, make_shared<lambertian>(vec3(1, 0.2, 0.1))));
-
+    world.add(make_shared<sphere>(vec3(-4, 1, 0), 1.0, make_shared<lambertian>(make_shared<constant_texture>(vec3(1, 0.2, 0.1)))));
+        
+    
+    
+    
     world.add(
         make_shared<sphere>(vec3(4, 1, 0), 1.0, make_shared<metal>(vec3(0.7, 0.6, 0.5), 0.0)));
 
