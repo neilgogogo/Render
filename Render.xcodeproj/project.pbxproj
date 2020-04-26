@@ -25,6 +25,18 @@
 /* Begin PBXFileReference section */
 		2F70A5F724502E9F00A6B67C /* Render */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Render; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F70A5FA24502E9F00A6B67C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2F70A60224503FE500A6B67C /* ray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ray.h; sourceTree = "<group>"; };
+		2F70A604245044FB00A6B67C /* vec3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vec3.h; sourceTree = "<group>"; };
+		2F70A60524505EFE00A6B67C /* hittable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hittable.h; sourceTree = "<group>"; };
+		2F70A60624505F6600A6B67C /* sphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sphere.h; sourceTree = "<group>"; };
+		2F70A60724507CAA00A6B67C /* hittable_list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hittable_list.h; sourceTree = "<group>"; };
+		2F70A60824507EE600A6B67C /* rtweekend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rtweekend.h; sourceTree = "<group>"; };
+		2F70A6092450EAFE00A6B67C /* camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
+		2F70A60A2451DEC200A6B67C /* material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = material.h; sourceTree = "<group>"; };
+		2F70A60B2454359600A6B67C /* moving_sphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = moving_sphere.h; sourceTree = "<group>"; };
+		2F70A60C24546CE200A6B67C /* aabb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aabb.h; sourceTree = "<group>"; };
+		2F70A60D245494CF00A6B67C /* bvh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bvh.h; sourceTree = "<group>"; };
+		2F70A60E2454E1A400A6B67C /* texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = texture.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,18 @@
 			isa = PBXGroup;
 			children = (
 				2F70A5FA24502E9F00A6B67C /* main.cpp */,
+				2F70A60224503FE500A6B67C /* ray.h */,
+				2F70A604245044FB00A6B67C /* vec3.h */,
+				2F70A60524505EFE00A6B67C /* hittable.h */,
+				2F70A60624505F6600A6B67C /* sphere.h */,
+				2F70A60724507CAA00A6B67C /* hittable_list.h */,
+				2F70A60824507EE600A6B67C /* rtweekend.h */,
+				2F70A6092450EAFE00A6B67C /* camera.h */,
+				2F70A60A2451DEC200A6B67C /* material.h */,
+				2F70A60B2454359600A6B67C /* moving_sphere.h */,
+				2F70A60C24546CE200A6B67C /* aabb.h */,
+				2F70A60D245494CF00A6B67C /* bvh.h */,
+				2F70A60E2454E1A400A6B67C /* texture.h */,
 			);
 			path = Render;
 			sourceTree = "<group>";
