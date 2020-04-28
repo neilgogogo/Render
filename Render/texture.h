@@ -10,6 +10,7 @@
 #define texture_h
 
 #include "rtweekend.h"
+//#include "perlin.h"
 
 class texture {
     public:
@@ -46,5 +47,20 @@ class checker_texture : public texture {
         shared_ptr<texture> odd;
         shared_ptr<texture> even;
 };
+
+//class noise_texture : public texture {
+//    public:
+//        noise_texture() {}
+//
+//        virtual vec3 value(double u, double v, const vec3& p) const {
+//            return vec3(1,1,1) * noise.noise(p);
+//        }
+////        virtual vec3 value(const vec3& p) const {
+////            return vec3(1,1,1) * noise.noise(p);
+////        }
+//    public:
+//        perlin noise;
+//};
+
 
 #endif /* texture_h */

@@ -59,6 +59,10 @@ inline double clamp(double x, double min, double max) {
     return x;
 }
 
+inline int random_int(int min, int max){
+    return int(min + (max-min)*random_double());
+}
+
 // Common Headers
 
 #include "ray.h"
